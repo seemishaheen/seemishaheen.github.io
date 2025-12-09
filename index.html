@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Laravel Developer</title>
+    <title>Seemi Shaheen - Full-Stack Laravel Developer</title>
+    <meta name="description" content="Full-Stack Web Developer specializing in Laravel, Vue.js, and Azure. 2+ years of experience building scalable solutions.">
     <style>
         * {
             margin: 0;
@@ -87,10 +88,11 @@
 
         .hero-content p {
             font-size: 1.1rem;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 2rem;
             opacity: 0.9;
             animation: fadeInUp 0.8s ease 0.4s backwards;
+            line-height: 1.8;
         }
 
         .tech-stack {
@@ -110,11 +112,36 @@
             backdrop-filter: blur(10px);
         }
 
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.7s backwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
-            animation: fadeInUp 0.8s ease 0.8s backwards;
+            animation: fadeInUp 0.8s ease 0.9s backwards;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -159,10 +186,79 @@
             color: #333;
         }
 
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-item h3 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .company {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item .duration {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-item ul {
+            margin-left: 1.5rem;
+            color: #666;
+        }
+
+        .timeline-item li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -202,6 +298,7 @@
         .project-content p {
             color: #666;
             margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
         .project-tech {
@@ -219,23 +316,21 @@
             color: #667eea;
         }
 
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-links a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .project-links a:hover {
-            color: #764ba2;
+        .achievement {
+            background: #e8f5e9;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-weight: 500;
         }
 
         /* Skills Section */
+        #skills {
+            background: #f9f9f9;
+        }
+
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -269,14 +364,9 @@
         }
 
         /* About Section */
-        #about {
-            background: #f9f9f9;
-        }
-
         .about-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .about-content p {
@@ -286,7 +376,54 @@
             margin-bottom: 1.5rem;
         }
 
+        .education {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .education h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-item h4 {
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .education-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .cert-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
         /* Contact Section */
+        #contact {
+            background: #f9f9f9;
+        }
+
         .contact-content {
             text-align: center;
         }
@@ -337,15 +474,40 @@
             }
         }
 
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.5rem;
             }
 
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
             .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .stats {
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
             }
 
             .cta-buttons {
@@ -355,6 +517,14 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -362,35 +532,101 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <div class="logo">YourName</div>
+            <div class="logo">Seemi Shaheen</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn">☰</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Full-Stack Laravel Developer</h1>
-            <p class="subtitle">Building Robust Web Applications</p>
-            <p>I create scalable and efficient web applications using Laravel and Vue.js, turning complex problems into elegant solutions.</p>
+            <h1>Seemi Shaheen</h1>
+            <p class="subtitle">Full-Stack Web Developer | Laravel • Vue.js • Azure</p>
+            <p>I transform complex business requirements into scalable digital experiences that deliver real results. Over the past two years, I've built applications serving 1,000+ active users with 99%+ uptime, improved performance by 15%, and reduced security vulnerabilities by 30% through Laravel best practices.</p>
             
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99%+</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+            </div>
+
             <div class="tech-stack">
-                <span class="tech-badge">Laravel</span>
+                <span class="tech-badge">Laravel 10/11</span>
                 <span class="tech-badge">Vue.js</span>
                 <span class="tech-badge">PHP</span>
+                <span class="tech-badge">Azure</span>
+                <span class="tech-badge">RESTful APIs</span>
                 <span class="tech-badge">MySQL</span>
-                <span class="tech-badge">REST APIs</span>
             </div>
 
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Associate-1 Laravel Developer</h3>
+                <div class="company">Devomech Solutions GmbH</div>
+                <div class="duration">December 2024 - Present | Islamabad, Pakistan</div>
+                <p>Currently architecting and developing scalable web applications using Laravel 10/11 for diverse enterprise clients, with a strong focus on maintainable and efficient code.</p>
+                <ul>
+                    <li>Built comprehensive employee management system with Laravel backend, Vue.js frontend, and Firebase for real-time notifications</li>
+                    <li>Successfully integrated FastAPI microservices with Laravel applications to enhance performance and scalability</li>
+                    <li>Deployed and configured applications on Azure cloud platforms ensuring optimal performance</li>
+                    <li>Implemented robust security measures including CSRF protection, input validation, and RBAC systems</li>
+                    <li>Active participant in Agile development cycles with cross-functional teams</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Laravel Developer</h3>
+                <div class="company">CDigital</div>
+                <div class="duration">December 2023 - November 2024 | Islamabad, Pakistan</div>
+                <p>Developed and maintained multiple Laravel-based web applications serving 1000+ active users with consistent uptime and performance.</p>
+                <ul>
+                    <li>Achieved 15% performance improvement through efficient routing strategies and database query optimization</li>
+                    <li>Integrated third-party APIs including payment gateways and notification systems</li>
+                    <li>Created responsive, mobile-first interfaces using Blade templating engine and Bootstrap</li>
+                    <li>Reduced security vulnerabilities by 30% through Laravel security best practices</li>
+                    <li>Maintained high code quality through disciplined Git workflows and peer code reviews</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Laravel Internship</h3>
+                <div class="company">HCC Technology Foundation</div>
+                <div class="duration">September 2022 - December 2022 | Lahore, Punjab, Pakistan</div>
+                <p>Focused on building and maintaining web applications, improving backend logic, and implementing secure authentication systems. Gained hands-on experience in efficient coding, performance optimization, and team collaboration.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Web Development Intern</h3>
+                <div class="company">Interns Pakistan</div>
+                <div class="duration">August 2022 - September 2022 | Punjab, Pakistan</div>
+                <p>Immersive program focused on client-side development, mastering HTML5, CSS3, Bootstrap, JavaScript, ES6, jQuery, PHP, and WordPress through learning-based challenges.</p>
             </div>
         </div>
     </section>
@@ -401,57 +637,54 @@
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card">
-                <div class="project-image">🛒</div>
+                <div class="project-image">👥</div>
                 <div class="project-content">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-featured online store with payment integration, inventory management, and admin dashboard.</p>
+                    <h3>Employee Management System</h3>
+                    <p>Comprehensive enterprise solution with Laravel backend, Vue.js frontend, and Firebase integration for real-time notifications and secure authentication.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">Laravel 11</span>
                         <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Stripe</span>
-                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Azure</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo →</a>
-                        <a href="#" target="_blank">GitHub →</a>
+                    <div class="achievement">
+                        ✓ Real-time notifications • RBAC implementation
                     </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="project-card">
-                <div class="project-image">📊</div>
+                <div class="project-image">⚡</div>
                 <div class="project-content">
-                    <h3>Task Management System</h3>
-                    <p>Real-time collaborative task manager with team features, notifications, and progress tracking.</p>
+                    <h3>FastAPI Microservices Integration</h3>
+                    <p>Enhanced Laravel application performance by integrating FastAPI microservices, creating a hybrid architecture for improved scalability.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Laravel</span>
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">WebSockets</span>
-                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">REST APIs</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo →</a>
-                        <a href="#" target="_blank">GitHub →</a>
+                    <div class="achievement">
+                        ✓ Improved system performance and scalability
                     </div>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="project-card">
-                <div class="project-image">🏥</div>
+                <div class="project-image">🚀</div>
                 <div class="project-content">
-                    <h3>Healthcare Booking App</h3>
-                    <p>Patient appointment scheduling system with doctor profiles, availability management, and SMS notifications.</p>
+                    <h3>High-Traffic Web Applications</h3>
+                    <p>Built and maintained multiple Laravel applications serving 1000+ active users with 99%+ uptime through optimized architecture and security practices.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Laravel</span>
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Twilio</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">jQuery</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo →</a>
-                        <a href="#" target="_blank">GitHub →</a>
+                    <div class="achievement">
+                        ✓ 15% performance boost • 30% fewer vulnerabilities
                     </div>
                 </div>
             </div>
@@ -465,11 +698,12 @@
             <div class="skill-category">
                 <h3>Backend Development</h3>
                 <ul class="skill-list">
-                    <li>Laravel Framework</li>
+                    <li>Laravel 10/11</li>
                     <li>PHP</li>
                     <li>RESTful API Design</li>
-                    <li>MySQL & PostgreSQL</li>
-                    <li>Redis & Caching</li>
+                    <li>MVC Architecture</li>
+                    <li>FastAPI Integration</li>
+                    <li>MySQL Database</li>
                 </ul>
             </div>
 
@@ -479,30 +713,31 @@
                     <li>Vue.js</li>
                     <li>JavaScript (ES6+)</li>
                     <li>HTML5 & CSS3</li>
-                    <li>Tailwind CSS</li>
-                    <li>Responsive Design</li>
+                    <li>Bootstrap Framework</li>
+                    <li>jQuery</li>
+                    <li>Laravel Blade</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3>Tools & DevOps</h3>
+                <h3>Cloud & DevOps</h3>
                 <ul class="skill-list">
+                    <li>Microsoft Azure</li>
+                    <li>Firebase</li>
                     <li>Git & GitHub</li>
-                    <li>Docker</li>
-                    <li>Linux/Ubuntu</li>
-                    <li>Composer & NPM</li>
-                    <li>CI/CD Pipelines</li>
+                    <li>Agile/Scrum</li>
+                    <li>CI/CD Practices</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3>Other Skills</h3>
+                <h3>Security & Best Practices</h3>
                 <ul class="skill-list">
-                    <li>API Integration</li>
-                    <li>Database Design</li>
-                    <li>Testing (PHPUnit)</li>
-                    <li>Payment Gateways</li>
-                    <li>Agile/Scrum</li>
+                    <li>CSRF Protection</li>
+                    <li>RBAC Systems</li>
+                    <li>Input Validation</li>
+                    <li>Secure Authentication</li>
+                    <li>Code Review</li>
                 </ul>
             </div>
         </div>
@@ -512,13 +747,32 @@
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>I'm a passionate Full-Stack Laravel Developer with expertise in building modern web applications. I specialize in creating efficient, scalable solutions using Laravel for backend development and Vue.js for dynamic frontends.</p>
+            <p>I'm a passionate Full-Stack Web Developer with 2+ years of experience transforming complex business requirements into scalable digital experiences. My expertise spans the entire development stack, from architecting robust Laravel backends to crafting intuitive Vue.js frontends.</p>
             
-            <p>With a strong foundation in PHP and JavaScript, I enjoy tackling complex problems and turning them into simple, beautiful, and intuitive applications. I'm constantly learning and staying up-to-date with the latest technologies and best practices.</p>
+            <p>Throughout my career, I've consistently delivered high-quality solutions that prioritize performance, security, and user experience. I'm particularly proud of achieving 15% performance improvements and reducing security vulnerabilities by 30% across multiple projects.</p>
             
-            <p>When I'm not coding, I enjoy contributing to open-source projects, writing technical articles, and helping other developers in the community.</p>
-            
-            <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Download Resume</a>
+            <p>Based in Islamabad, Punjab, Pakistan, I'm currently contributing to enterprise-level solutions at Devomech Solutions GmbH, where I work with cutting-edge technologies and collaborate with cross-functional teams in Agile environments.</p>
+
+            <div class="education">
+                <h3>🎓 Education</h3>
+                <div class="education-item">
+                    <h4>Bachelor's Degree in Computer Science</h4>
+                    <p>Namal Institute | August 2019 - September 2023</p>
+                </div>
+                <div class="education-item">
+                    <h4>Intermediate in Computer Science</h4>
+                    <p>Daanish School Jand Attock | March 2017 - April 2019</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 3rem; margin-bottom: 1.5rem; color: #667eea;">📜 Certifications</h3>
+            <div class="certifications">
+                <div class="cert-badge">Machine Learning from Basic to Advance</div>
+                <div class="cert-badge">Python and Deep Learning Bootcamp</div>
+                <div class="cert-badge">UI/UX Designing Workshop</div>
+                <div class="cert-badge">Data Wrangling using Slice N' Dice</div>
+                <div class="cert-badge">FUN FLAIR'21</div>
+            </div>
         </div>
     </section>
 
@@ -526,20 +780,20 @@
     <section id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-content">
-            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you!</p>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">I'm currently open to new opportunities and exciting projects. Whether you want to discuss a potential collaboration or just say hello, feel free to reach out!</p>
             
             <div class="contact-info">
                 <div class="contact-item">
                     <span>📧 Email</span>
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    <a href="mailto:seemis343@gmail.com">seemis343@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span>💼 LinkedIn</span>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                    <a href="https://www.linkedin.com/in/seemishaheen71" target="_blank">linkedin.com/in/seemishaheen71</a>
                 </div>
                 <div class="contact-item">
-                    <span>🐙 GitHub</span>
-                    <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                    <span>📍 Location</span>
+                    <span style="color: #666;">Islamabad, Punjab, Pakistan</span>
                 </div>
             </div>
         </div>
@@ -547,7 +801,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. Built with Laravel & Vue.js</p>
+        <p>&copy; 2024 Seemi Shaheen. Built with Laravel & Vue.js ❤️</p>
     </footer>
 
     <script>
@@ -585,6 +839,25 @@
                     link.style.opacity = '1';
                 }
             });
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                navLinks.style.padding = '1rem';
+            }
         });
     </script>
 </body>
